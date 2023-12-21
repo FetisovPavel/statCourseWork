@@ -40,7 +40,7 @@ class RealEstateDataAnalyzer:
     def plot_prices_over_time(self):
         plt.figure(figsize=(12, 6))
         plt.plot(self.seasons, self.prices, marker='o')
-        plt.title('Изменение цен за 1 кв. м с января 2015 по декабрь 2022')
+        plt.title('Изменение цен за 1 кв. м с января 2012 по декабрь 2022')
         plt.xlabel('Месяц')
         plt.ylabel('Цена за 1 кв. м')
         plt.xticks(range(0, len(self.seasons), 3), self.seasons[::3], rotation=45)
