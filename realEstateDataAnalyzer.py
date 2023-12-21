@@ -230,12 +230,13 @@ class RealEstateDataAnalyzer:
         np.set_printoptions(precision=4, suppress=True)
         print("Значение s_j:", s_j)
         Tj = result / s_j
+        print("Tj:")
         for i, val in enumerate(Tj, start=1):
             print(f"Коэффициент {i}: {val:.4f}")
 
         interval_min = result - T_kr * s_j
         interval_max = result + T_kr * s_j
-        print("Confidence Intervals:")
+        print("Интервалы (θj − tγsj; θj + tγsj):")
         for i, (min_val, max_val) in enumerate(zip(interval_min, interval_max)):
             print(f"Коэффициент {i + 1}: [{min_val}, {max_val}]")
 
