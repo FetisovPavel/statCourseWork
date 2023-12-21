@@ -219,7 +219,7 @@ class RealEstateDataAnalyzer:
         p_value = 1 - stats.f.cdf(F, df_fact, df_ost)
         print("P-value: ", p_value)
 
-        # Significance of coefficients
+        # Значимость коэффициентов
         s = math.sqrt(s_square_ost)
         y = np.array(y)
         C_T = X
