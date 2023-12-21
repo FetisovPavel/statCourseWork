@@ -243,7 +243,7 @@ class RealEstateDataAnalyzer:
         p_values = 2 * (1 - stats.t.cdf(np.abs(Tj), df_ost))
         print("P-значения для Tj:")
         for i, p_value in enumerate(p_values):
-            print(f"Коэффициент {i + 1}: {p_value}")
+            print(f"Коэффициент {i + 1}: {p_value:.8f}")
 
         # R^2 and R^2_adj
         s_squared = S / (len(y) - 1)
