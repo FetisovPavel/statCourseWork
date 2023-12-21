@@ -42,6 +42,22 @@ print("Результат MNK:", result_regression)
 y = values_avg
 ones_array = np.ones_like(y)
 
+print("Исследование модели с 6-ю факторами")
+X = np.array([ones_array, ipoteka_rate, minimum_wage, usd_exchange_rate, credit_volume, employment_rate, population])
+real_estate_analyzer.dis_analyze_and_sign_coeff(y, X, 2.776445)
 
+print("Исследование модели с факторами x1, x4, x5, x6")
+X = np.array([ones_array, ipoteka_rate, credit_volume, employment_rate, population])
+real_estate_analyzer.dis_analyze_and_sign_coeff(y, X, 2.4469)
+
+print("Исследование модели с факторами x4, x5, x6")
+X = np.array([ones_array, credit_volume, employment_rate, population])
+real_estate_analyzer.dis_analyze_and_sign_coeff(y, X, 2.3646)
+
+print("Исследование модели с факторами x4, x5")
+X = np.array([ones_array, credit_volume, employment_rate])
+real_estate_analyzer.dis_analyze_and_sign_coeff(y, X, 2.306)
+
+print("Исследование модели с фактором x4")
 X = np.array([ones_array, credit_volume])
 real_estate_analyzer.dis_analyze_and_sign_coeff(y, X, 2.2621)
