@@ -227,6 +227,8 @@ class RealEstateDataAnalyzer:
         C_T_C = np.dot(C_T, C)
         inv_C_T_C = np.linalg.inv(C_T_C)
         s_j = s * np.sqrt(np.diagonal(inv_C_T_C))
+        np.set_printoptions(precision=4, suppress=True)
+        print("Значение s_j:", s_j)
         Tj = result / s_j
         for i, val in enumerate(Tj, start=1):
             print(f"Коэффициент {i}: {val:.4f}")
@@ -248,3 +250,4 @@ class RealEstateDataAnalyzer:
         print("R^2 =", r)
         r_adj = 1 - s_square_ost / s_squared
         print("R^2adj =", r_adj)
+
