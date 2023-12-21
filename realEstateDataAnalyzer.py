@@ -244,7 +244,7 @@ class RealEstateDataAnalyzer:
         for i, p_value in enumerate(p_values):
             print(f"Коэффициент {i + 1}: {p_value}")
 
-        # R^2 and R_adj
+        # R^2 and R^2_adj
         s_squared = S / (len(y) - 1)
         r = 1 - ((df_ost * s_square_ost) / ((len(y) - 1) * s_squared))
         print("R^2 =", r)
